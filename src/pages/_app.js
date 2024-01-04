@@ -10,6 +10,14 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     font-family: Helvetica, sans-serif;
+    color: white;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  ul{
+    list-style-type: none;
   }
 `;
 
