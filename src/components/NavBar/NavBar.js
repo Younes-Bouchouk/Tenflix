@@ -6,16 +6,13 @@ import pdp from '../../assets/eren-pdp.png'
 import { NavContainer, Logo, NavList, NavItem, RightMenu, NavIcon, UserMenu, UserLogo, OpenMenu } from './NavBar.style';
 
 const Navbar = () => {
+    
 
-    const [scroll, setScroll] = useState(false)
-
+    const [scroll, setScroll] = useState(0)
 
     const changeBackground = () => {
-        if (window.scrollY >= 30) {
-            setScroll(true)
-        } else {
-            setScroll(false)
-        }
+        setScroll(window.scrollY)
+
     }
 
     useEffect(() => {
@@ -29,7 +26,7 @@ const Navbar = () => {
         <NavContainer scroll={scroll}>
 
             <NavList>
-                <Logo id='logo' src={logogo} alt="" />
+                <Logo id='logo' src={logogo} alt="Logo" />
 
                 <NavItem href={'/'}>Accueil</NavItem>
                 <NavItem href={'/'}>Séries</NavItem>

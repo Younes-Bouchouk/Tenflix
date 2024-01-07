@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const NavContainer = styled.div(({scroll}) => ({
+    zIndex: '1',
     backgroundColor: scroll ? '#141414' : 'transparent',
     backgroundImage : scroll && 'linear-gradient( #080808, rgba(255,255,255,0))',
     position: 'fixed',
@@ -23,16 +24,18 @@ export const Logo = styled(Image)`
 
 export const NavList = styled.nav`
     display: flex;
+    align-items: center;
 `;
 
 export const NavItem = styled(Link)`
     margin-left: 20px;
     align-self: center; // Quand la fenêtre se rétrécit
     text-align: center; // Pareil
-    transition: color 0.5s ease;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.45);
 
     &:hover {
-        color: lightgray;
+        color: lightgrey;
+        transition: color 0.5s ease;
     }
 `;
 

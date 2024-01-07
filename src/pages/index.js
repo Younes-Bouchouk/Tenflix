@@ -1,16 +1,10 @@
-import styled from 'styled-components'
-
+import Poster from '@/components/Poster/Poster'
 
 export default function Home() {
 
-  const Welcome = styled.h1`
-    background: skyblue;
-    height: 2000px;
-  `
-
   return (
     <>
-      <Welcome></Welcome>
+      <Poster />
     </>
   )
 }

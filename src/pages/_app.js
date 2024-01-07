@@ -11,10 +11,17 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: Helvetica, sans-serif;
     color: white;
+    background-color: #141414;
+    height: 300vh;
   }
   a {
     color: inherit;
     text-decoration: none;
+  }
+  button {
+    border: 0;
+    background: none;
+    cursor: pointer;
   }
   ul{
     list-style-type: none;
