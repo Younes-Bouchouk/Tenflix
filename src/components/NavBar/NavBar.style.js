@@ -28,6 +28,7 @@ export const NavList = styled.nav`
 `;
 
 export const NavItem = styled(Link)`
+    font-size: 14px;
     margin-left: 20px;
     align-self: center; // Quand la fenêtre se rétrécit
     text-align: center; // Pareil

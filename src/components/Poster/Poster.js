@@ -5,11 +5,16 @@ import unmute from '../../assets/icons/unmute.svg'
 import replay from '../../assets/icons/replay.svg'
 
 import { Button, Classification, Control, Icon, Img, PosterContainer, Video } from './Poster.style'
+import Infos from './Infos'
 
 export default function Poster() {
 
     // Vérifier si la vidéo est mute
     const [videoMute, setVideoMute] = useState(true)
+    // Vérifier si la vidéo est finis
+    const [videoEnd, setVideoEnd] = useState(false)
+    // Applique un référence à la balise vidéo
+    const videoRef = useRef(null);
 
     // Permet de mute/unmute la vidéo
     const handleVideoMute = () => {
@@ -20,16 +25,10 @@ export default function Poster() {
         }
     }
 
-    // Vérifier si la vidéo est finis
-    const [videoEnd, setVideoEnd] = useState(false)
-
     // Permet de changer le status de la vidéo lorqu'elle se termine
     const handleVideoEnd = () => {
         setVideoEnd(true)
     };
-
-    // Applique un référence à la balise vidéo
-    const videoRef = useRef(null);
 
     // Permet de relancer la vidéo
     const startVideo = () => {
@@ -66,6 +65,8 @@ return (
                 </Button>
                 <Classification>+7</Classification>
             </Control>
+
+            <Infos/>
  
         </PosterContainer>
     )

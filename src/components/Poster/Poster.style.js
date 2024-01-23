@@ -4,6 +4,7 @@ import Image from "next/image";
 export const PosterContainer = styled.div `
     position: relative;
     height: 56.25vw;
+    max-height: 100vh;
     width: 100vw;
 `;
 
@@ -14,7 +15,7 @@ const style = `
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: 0 50%;
+    object-position: 0 0;
     transition: opacity 3s ease;
 `;
 
@@ -42,7 +43,7 @@ export const Control = styled.div`
     display: flex;
     align-items: center;
     position: absolute;
-    top: 70%;
+    top: 65%;
     right: 0;
 `;
 
