@@ -38,8 +38,8 @@ const Navbar = () => {
 
 
             <RightMenu>
-                <NavIcon id='search' src={search} alt="" />
-                <NavIcon id='notif' src={notif} alt="" />        
+                <NavIcon id='search' src={search} alt="icon" />
+                <NavIcon id='notif' src={notif} alt="icon" />        
 
                 <UserMenu id='profil'>
                     <UserLogo src={pdp} alt='Profil' />

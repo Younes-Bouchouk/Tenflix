@@ -4,10 +4,10 @@ import mute from '../../assets/icons/mute.svg'
 import unmute from '../../assets/icons/unmute.svg'
 import replay from '../../assets/icons/replay.svg'
 
-import { Button, Classification, Control, Icon, Img, PosterContainer, Video } from './Poster.style'
+import { Button, Classification, Control, Icon, Img, Container, Video } from './Billboard.style'
 import Infos from './Infos'
 
-export default function Poster() {
+export default function Billboard() {
 
     // Vérifier si la vidéo est mute
     const [videoMute, setVideoMute] = useState(true)
@@ -41,17 +41,18 @@ export default function Poster() {
     } 
 
 return (
-        <PosterContainer>
+        <Container>
 
             <Img
                 props={videoEnd}  
-                fill 
+                width={500}
+                height={500}
                 src='/image-jjk.png'
                 alt='image'
             />
             <Video  
                 props={videoEnd}                  
-                controls
+                //controls
                 ref={videoRef}
                 autoPlay
                 muted={videoMute}
@@ -68,6 +69,6 @@ return (
 
             <Infos/>
  
-        </PosterContainer>
+        </Container>
     )
 }

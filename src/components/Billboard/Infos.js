@@ -1,5 +1,5 @@
 import React from 'react'
-import { ButtonList, Description, InfosContainer, MoreButton, PlayButton, Title, IconButton } from './Infos.style'
+import { InfosContainer, Title, Description, ButtonList, PlayButton, MoreButton, IconButton } from './Infos.style'
 import img from '@/assets/animeLogo/logo-jjk.png'
 import play from '@/assets/icons/play-icon.svg'
 import more from '@/assets/icons/moreInfos-icon.svg'

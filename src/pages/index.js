@@ -1,10 +1,13 @@
-import Poster from '@/components/Poster/Poster'
+import Billboard from '@/components/Billboard/Billboard'
+import Slider from '@/components/Slider/Slider'
 
 export default function Home() {
 
   return (
     <>
-      <Poster />
+      <Billboard />
+
+      <Slider/>
     </>
   )
 }

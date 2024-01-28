@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-export const PosterContainer = styled.div `
+export const Container = styled.div `
     position: relative;
-    height: 56.25vw;
-    max-height: 100vh;
+    height: calc(56.25vw - (92vw / 11));
+    //max-height: 100vh;
     width: 100vw;
 `;
 
@@ -12,10 +12,10 @@ const style = `
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 56.25vw;
     width: 100%;
     object-fit: cover;
-    object-position: 0 0;
+    object-position: top;
     transition: opacity 3s ease;
 `;
 
@@ -43,7 +43,7 @@ export const Control = styled.div`
     display: flex;
     align-items: center;
     position: absolute;
-    top: 65%;
+    top: 55%;
     right: 0;
 `;
 

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const NavContainer = styled.div(({scroll}) => ({
-    zIndex: '1',
+    zIndex: '10',
     backgroundColor: scroll ? '#141414' : 'transparent',
     backgroundImage : scroll && 'linear-gradient( #080808, rgba(255,255,255,0))',
     position: 'fixed',
@@ -48,7 +48,7 @@ export const RightMenu = styled.div`
 export const NavIcon = styled(Image)`
     height: 22px;
     width: 22px;
-    margin-right: 15px;
+    margin-right: 20px;
 `;
 
 export const UserMenu = styled.div`

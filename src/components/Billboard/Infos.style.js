@@ -4,7 +4,7 @@ import Image from "next/image";
 export const InfosContainer = styled.div `
     z-index: 1;
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translate(0, -50%);
     left: 4%;
     width: 35vw;
@@ -38,11 +38,10 @@ export const Button = styled.a `
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
     font-size: 1.2vw;
     font-weight: bold;
     border-radius: calc(0.2vw);
-    padding: 0.8vw 1.7vw;
+    padding: 0.7vw 1.7vw;
     white-space: nowrap;
 
 `;
@@ -72,6 +71,7 @@ export const MoreButton = styled(Button) `
 
 export const IconButton = styled(Image) `
     margin-right: 10px;
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 1.8vw;
+
 `;
