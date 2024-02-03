@@ -1,4 +1,7 @@
+<img width="1421" alt="Capture d’écran 2024-02-04 à 00 22 29" src="https://github.com/Younes-Bouchouk/Tenflix/assets/115986198/8a609b59-9424-4228-8f52-
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+c38b102ccf44">
 
 ## Getting Started
 
