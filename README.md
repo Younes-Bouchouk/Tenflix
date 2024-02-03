@@ -1,6 +1,9 @@
 
 https://github.com/Younes-Bouchouk/Tenflix/blob/main/capture.png
 
+![Uploading capture.png…]()
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 c38b102ccf44">
 
