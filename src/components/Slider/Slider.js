@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react'
-
 import { SliderContainer, SliderItem, ImgItem, LeftButton, RightButton, ImgButton } from './Slider.style'
+import dataset from '@/mock/data';
 
-const nb = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1]
+
 
 export default function Slider() {
+    
+    // Récupère tous les tags pour les cards
+    const tagsList = dataset.map(data => data.tag)
 
     const cards = useRef();
     const [slots, setSlots] = useState(0) // Le nombre de cards dans une frame
@@ -20,6 +23,7 @@ export default function Slider() {
     }, [slots]);
 
     useEffect(() => {
+
         if (typeof window !== 'undefined') {
             // Permet d'attribuer un certain nombre de slots en fonction de la largeur de l'écran
             const updateSlots = () => {
@@ -59,32 +63,26 @@ export default function Slider() {
     }
 
     return (
-        <SliderContainer ref={cards}>
+            <SliderContainer ref={cards}>
+            <h1 style={{position:'absolute', top:'-2vw', fontSize:'1.5vw', fontWeight:'normale'}}>Animes à ne pas manquer</h1>
+                {tagsList.map(tag =>
+                    <SliderItem slots={slots} move={moveFrame} key={tag}>
+                        <ImgItem src={'/assets/cards/'+tag+'.jpg'} width={500} height={500} alt={tag} />
+                    </SliderItem>
+                )}
 
-            {/* {nb.map(n => 
-                <SliderItem moveFrame={moveFrame}>
-                    <ImgItem src={'/jjk.jpg'} width={500} height={500} />
-                </SliderItem>
-            )} */}
+                {moveFrame < 0 && (
+                    <LeftButton className='slideBtn left' onClick={slideLeft}>
+                        <ImgButton src={'/icons/slideCards-icon.png'} width={500} height={500} alt='slideL' />
+                    </LeftButton>
+                )}
 
-            {nb.map(n =>
-                <SliderItem slots={slots} move={moveFrame}>
-                    <ImgItem src={'/ctt.jpg'} width={500} height={500} alt='img' />
-                </SliderItem>
-            )}
+                {moveFrame > frames * -1 && (
+                    <RightButton className='slideBtn right' onClick={slideRight}>
+                        <ImgButton src={'/icons/slideCards-icon.png'} width={500} height={500} alt='slideR' />
+                    </RightButton>
+                )}
 
-            {moveFrame < 0 && (
-                <LeftButton className='slideBtn left' onClick={slideLeft}>
-                    <ImgButton src={'/icons/slideCards-icon.png'} width={500} height={500} alt='img' />
-                </LeftButton>
-            )}
-
-            {moveFrame > frames * -1 && (
-                <RightButton className='slideBtn right' onClick={slideRight}>
-                    <ImgButton src={'/icons/slideCards-icon.png'} width={500} height={500} alt='img' />
-                </RightButton>
-            )}
-
-        </SliderContainer>
+            </SliderContainer>
     )
 }

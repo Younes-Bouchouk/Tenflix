@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import Layout from '@/components/Layout/Layout';
-// import '../styles/globals.css'
 
 const GlobalStyle = createGlobalStyle`
   * {

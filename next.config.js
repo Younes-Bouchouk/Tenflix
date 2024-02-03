@@ -6,6 +6,9 @@
 module.exports = {
   compiler: {
     styledComponents: true
-  }
+  },
+  images: {
+    domains: ['firebasestorage.googleapis.com'],
+  },
 };
 

@@ -9,25 +9,25 @@ export const SliderContainer = styled.div `
     display: flex;
     overflow-x: clip;
     background: linear-gradient(transparent 0%, #141414 50%, #141414);
+    margin-bottom: 7vw;
 `;
 
 export const SliderItem = styled.div (({slots, move}) => ({
-    minWidth: 'calc(92vw / ' + slots + ' )',
-    height: '100%',
+    minWidth: `calc(92vw / ${slots})`,
+    //height: '100%',
     padding: '0 0.2vw',
     objectFit: 'contain',
     transform: 'translate(' + move * 92 + 'vw )',
-    transition: 'transform 1s ease'
+    transition: 'transform 2s ease',
+    
 }));
 
 export const ImgItem = styled(Image) `
     height: 100%;
     width: 100%;
     border-radius: 2px;
-    
-    &:first-child {
-        //padding-left: 0.4vw;
-    }
+    object-fit: cover
+
 `;
 
 export const SliderButton = styled.button `

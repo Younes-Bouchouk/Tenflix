@@ -34,6 +34,7 @@ export const Video = styled.video`
     ${({ props }) => (props ? styleInvisible : styleVisible)}
 `;
 
+
 export const Img = styled(Image)`
     ${style}
     ${({ props }) => (props ? styleVisible : styleInvisible)}
@@ -43,7 +44,7 @@ export const Control = styled.div`
     display: flex;
     align-items: center;
     position: absolute;
-    top: 55%;
+    top: 70%;
     right: 0;
 `;
 

@@ -3,11 +3,17 @@ import Slider from '@/components/Slider/Slider'
 
 export default function Home() {
 
-  return (
-    <>
-      <Billboard />
+    
 
-      <Slider/>
-    </>
-  )
+    return (
+        <>
+            <Billboard />
+
+            <Slider />
+
+            <Slider />
+
+            <Slider />
+        </>
+    )
 }

@@ -1,24 +1,36 @@
-import React, {useState, useRef, useEffect} from 'react'
-import play from '../../assets/icons/play-icon.svg'
-import mute from '../../assets/icons/mute.svg'
-import unmute from '../../assets/icons/unmute.svg'
-import replay from '../../assets/icons/replay.svg'
+
+import React, { useState, useRef, useEffect } from 'react'
+import mute from '@/../public/icons/mute.svg'
+import unmute from '@/../public/icons/unmute.svg'
+import replay from '@/../public/icons/replay.svg'
+
+
 
 import { Button, Classification, Control, Icon, Img, Container, Video } from './Billboard.style'
 import Infos from './Infos'
 
+
+
 export default function Billboard() {
+
+    const [tag,setTag] = useState(null)
+
+    useEffect(() => {
+        const tagList = ['snk', 'jjk', 'vls']
+        const random = Math.floor(Math.random() * tagList.length)
+        setTag(tagList[random])
+    },[])
 
     // Vérifier si la vidéo est mute
     const [videoMute, setVideoMute] = useState(true)
     // Vérifier si la vidéo est finis
     const [videoEnd, setVideoEnd] = useState(false)
     // Applique un référence à la balise vidéo
-    const videoRef = useRef(null);
+    const videoRef = useRef(null);    
 
     // Permet de mute/unmute la vidéo
     const handleVideoMute = () => {
-        if (videoMute){
+        if (videoMute) {
             setVideoMute(false)
         } else {
             setVideoMute(true)
@@ -33,42 +45,48 @@ export default function Billboard() {
     // Permet de relancer la vidéo
     const startVideo = () => {
         setVideoEnd(false);
-    
+
         if (videoRef.current) {
             videoRef.current.currentTime = 0;
             videoRef.current.play();
         }
-    } 
+    }
 
-return (
+    return (
         <Container>
 
+
             <Img
-                props={videoEnd}  
+                props={videoEnd}
                 width={500}
                 height={500}
-                src='/image-jjk.png'
+                src={'/assets/posters/'+tag+'.png'}
                 alt='image'
             />
-            <Video  
-                props={videoEnd}                  
+
+            <Video
                 //controls
+                props={videoEnd}
                 ref={videoRef}
                 autoPlay
                 muted={videoMute}
-                onEnded={handleVideoEnd} 
-                src='/movie.mp4' 
-            /> 
+                onEnded={handleVideoEnd}
+                src={'/assets/videos/'+tag+'.mp4'}
+                alt='video'
+            />
 
             <Control>
                 <Button onClick={videoEnd ? startVideo : handleVideoMute}>
-                    <Icon src={videoEnd ? replay : videoMute ? mute : unmute} alt='image'/>
+                    <Icon src={videoEnd ? replay : videoMute ? mute : unmute} alt='image' />
                 </Button>
                 <Classification>+7</Classification>
             </Control>
 
-            <Infos/>
- 
+            <Infos tag={tag} />
+
+
+
+
         </Container>
     )
 }

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import logogo from '../../assets/tenflix.svg'
-import search from '../../assets/icons/search-icon.svg'
-import notif from '../../assets/icons/notif-icon.svg'
-import pdp from '../../assets/eren-pdp.png'
+import logogo from '@/../public/tenflix.svg'
+import search from '@/../public/icons/search-icon.svg'
+import notif from '@/../public/icons/notif-icon.svg'
+import pdp from '@/../public/assets/pdp.png'
 import { NavContainer, Logo, NavList, NavItem, RightMenu, NavIcon, UserMenu, UserLogo, OpenMenu } from './NavBar.style';
 
 const Navbar = () => {
@@ -12,7 +12,6 @@ const Navbar = () => {
 
     const changeBackground = () => {
         setScroll(window.scrollY)
-
     }
 
     useEffect(() => {

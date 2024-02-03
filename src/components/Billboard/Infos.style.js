@@ -4,10 +4,10 @@ import Image from "next/image";
 export const InfosContainer = styled.div `
     z-index: 1;
     position: absolute;
-    top: 40%;
+    top: 55%;
     transform: translate(0, -50%);
     left: 4%;
-    width: 35vw;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -15,7 +15,7 @@ export const InfosContainer = styled.div `
 `;
 
 export const Title = styled(Image) `
-    height: 10vw;
+    height: auto;
     width: 100%;
     object-fit: contain;
 `;
@@ -43,6 +43,7 @@ export const Button = styled.a `
     border-radius: calc(0.2vw);
     padding: 0.7vw 1.7vw;
     white-space: nowrap;
+    cursor: pointer;
 
 `;
 
