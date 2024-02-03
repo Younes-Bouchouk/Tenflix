@@ -1,6 +1,3 @@
-
-https://github.com/Younes-Bouchouk/Tenflix/blob/main/capture.png
-
 <img width="1421" alt="capture" src="https://github.com/Younes-Bouchouk/Tenflix/assets/115986198/10886bd8-3f4e-49d0-ad71-9860b77a2255">
 
 
